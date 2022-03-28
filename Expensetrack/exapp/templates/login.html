@@ -1,0 +1,11 @@
+{% extends 'index.html'%}
+{% block start %}
+<div class="content-section col-md-8">
+<form method="POST" action="{%url 'Login'%}">
+  <h1 style="text-align: center;">EXPENSE TRACKER</h1>
+  {% csrf_token%}
+  {{form.as_p}}
+  <button type="submit">Login</button>
+</form>
+</div>
+{% endblock %}
